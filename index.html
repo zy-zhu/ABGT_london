@@ -12,6 +12,7 @@
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.4/dist/mindar-image-aframe.prod.js"></script>
     <script type="text/javascript" src="./ar.js"></script>
+    <script src="./js/aframe-text-geometry-component.min.js"></script>
    <!-- CSS -->
    <link rel="stylesheet" type="text/css" href="./static/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="./static/css/ar.css"> 
@@ -21,7 +22,7 @@
 
   <body>
 <!-- Navigation  -->
-    <div  class="titlea"><a href="#">MIT CLIMATE MACHINE 20</a></div>  
+    <div  class="titlea"><a href="#">MIT CLIMATE MACHINE final1</a></div>  
     
     <div class="yellowrec"></div>
       <ul class="navbox navtitle">
@@ -84,43 +85,30 @@
       <a-camera position="0 0 0" look-controls="enabled: false" rotation-reader></a-camera>
       <a-assets>
       <img id="card" src="static/marker/marker_full.jpg" />
-      <a-asset-item id="model_10" src="static/assets/10x.gltf"></a-asset-item>
-      <a-asset-item id="model_3" src="static/assets/1_3.gltf"></a-asset-item>
-      <a-asset-item id="model_bs" src="static/assets/Big Seal.gltf"></a-asset-item>
-      <a-asset-item id="model_c1" src="static/assets/Cloud1.gltf"></a-asset-item>
-      <a-asset-item id="model_c2" src="static/assets/Cloud2.gltf"></a-asset-item>
-      <a-asset-item id="model_c3" src="static/assets/Cloud3.gltf"></a-asset-item>
-      <a-asset-item id="model_dlr" src="static/assets/DLR.gltf"></a-asset-item>
-        <a-asset-item id="model_hw1" src="static/assets/HeatWave1.gltf"></a-asset-item>
-        <a-asset-item id="model_hw2" src="static/assets/HeatWave2.gltf"></a-asset-item>
-        <a-asset-item id="model_hwt" src="static/assets/HeatWaves Text.gltf"></a-asset-item>
-        <a-asset-item id="model_pb" src="static/assets/Plastic Bottle.gltf"></a-asset-item>
-        <a-asset-item id="model_sw" src="static/assets/Seaweed.gltf"></a-asset-item>
+    
+
+        <a-asset-item id="model_final" src="static/assets_final/final1.gltf"></a-asset-item>
+
       </a-assets>
 
+  
+      
+
+      
       <a-entity mindar-image-target="targetIndex: 0">
-
-
-        <a-gltf-model rotation="90 0 0 " position="0 0 0" scale="2 4 2" src="#model_bs" animation-mixer></a-gltf-model>
-
-
+        <!-- <a-gltf-model rotation="90 0 0 " position="0 0 0" scale="2 4 2" src="#model_bs" animation-mixer></a-gltf-model> -->
         <!-- <a-plane src="#card" position="0 0 -0.2" height="1.5" width="1" rotation="0 0 0"></a-plane> -->
+        <!-- <a-gltf-model rotation="90 0 0" position="0 -0.8 0" scale="3.1 3.1 3.1" src="#model_final"
+          animation-mixer="duration:15; loop:repeat;"></a-gltf-model> -->
+          <a-gltf-model rotation="90 0 0" position="0 -0.8 0" scale="3.1 3.1 3.1" src="#model_final"
+          animation-mixer></a-gltf-model>
 
-
-        <a-gltf-model rotation="0 0 0 " position="0 0.25 0" scale="0.5 0.5 0.5" src="#model_10" animation-mixer></a-gltf-model>
-        <a-gltf-model rotation="90 0 0 " position="0 0 0" scale="0.5 0.5 0.5" src="#model_3" animation-mixer></a-gltf-model>
-        <a-gltf-model rotation="90 0 0 " position="0 0 0" scale="0.5 0.5 0.5" src="#model_c1" animation-mixer></a-gltf-model>
-        <a-gltf-model rotation="90 0 0 " position="0 0 0" scale="0.05 0.05 0.05" src="#model_c2" animation-mixer></a-gltf-model>
-        <a-gltf-model rotation="90 0 0 " position="0 0 0" scale="0.05 0.05 0.05" src="#model_c3" animation-mixer></a-gltf-model>
-        <a-gltf-model rotation="90 0 0 " position="0 0 0" scale="0.05 0.05 0.05" src="#model_dlr" animation-mixer></a-gltf-model>
-        <a-gltf-model rotation="90 0 0 " position="0 0 0" scale="0.05 0.05 0.05" src="#model_hw1" animation-mixer></a-gltf-model>
-        <a-gltf-model rotation="90 0 0 " position="0 0 0" scale="0.05 0.05 0.05" src="#model_hw2" animation-mixer></a-gltf-model>
-        <a-gltf-model rotation="90 0 0 " position="0 0 0" scale="0.05 0.05 0.05" src="#model_hwt" animation-mixer></a-gltf-model>
-        <a-gltf-model rotation="90 0 0 " position="0 0 0" scale="0.05 0.05 0.05" src="#model_pb" animation-mixer></a-gltf-model>
-        <a-gltf-model rotation="90 0 0 " position="0 0 0" scale="0.05 0.05 0.05" src="#model_sw" animation-mixer></a-gltf-model>
-        <a-gltf-model rotation="0 0 0 " position="0 0 0.1" scale="0.005 0.005 0.005" src="#model_10" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"></a-gltf-model>
-
-
+          <a-text value="Click"
+          font="FontsFree-Net-Akzidenz-grotesk-bold-msdf.json"
+          color="#33C3F0"
+          negate="false">
+  </a-text>
+   
          <!-- animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate" -->
         <!-- <a-gltf-model rotation="0 90 0 " position="0 0 0" scale="5 5 5" src="#model1" animation-mixer ></a-gltf-model> -->
       </a-entity> 
