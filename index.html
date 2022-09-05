@@ -13,6 +13,7 @@
     <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.4/dist/mindar-image-aframe.prod.js"></script>
     <script type="text/javascript" src="./ar.js"></script>
     <script src="./js/aframe-text-geometry-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
    <!-- CSS -->
    <link rel="stylesheet" type="text/css" href="./static/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="./static/css/ar.css"> 
@@ -22,13 +23,11 @@
 
   <body>
 <!-- Navigation  -->
-    <div  class="titlea"><a href="#">MIT CLIMATE MACHINE final1</a></div>  
+    <div  class="titlea"><a href="#">MIT CLIMATE MACHINE final2</a></div>  
     
     <div class="yellowrec"></div>
       <ul class="navbox navtitle">
-      <!-- <li>
-        <a href="#"><span class="linethrough">AR</span></a>
-      </li> -->
+
       <li >
         <a href="http://ec2-3-90-162-76.compute-1.amazonaws.com:8080/survey"><span>>QUIZ</span></a>
       </li>
@@ -83,12 +82,12 @@
 
     <a-scene mindar-image="imageTargetSrc: static/img/marker_1set.mind" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
       <a-camera position="0 0 0" look-controls="enabled: false" rotation-reader></a-camera>
+      
+      
       <a-assets>
       <img id="card" src="static/marker/marker_full.jpg" />
-    
-
         <a-asset-item id="model_final" src="static/assets_final/final1.gltf"></a-asset-item>
-
+        <a-asset-item id="enter" src="static/assets_final/enter.gltf"></a-asset-item>
       </a-assets>
 
   
@@ -96,99 +95,41 @@
 
       
       <a-entity mindar-image-target="targetIndex: 0">
-        <!-- <a-gltf-model rotation="90 0 0 " position="0 0 0" scale="2 4 2" src="#model_bs" animation-mixer></a-gltf-model> -->
-        <!-- <a-plane src="#card" position="0 0 -0.2" height="1.5" width="1" rotation="0 0 0"></a-plane> -->
-        <!-- <a-gltf-model rotation="90 0 0" position="0 -0.8 0" scale="3.1 3.1 3.1" src="#model_final"
-          animation-mixer="duration:15; loop:repeat;"></a-gltf-model> -->
+     
           <a-gltf-model rotation="90 0 0" position="0 -0.8 0" scale="3.1 3.1 3.1" src="#model_final"
-          animation-mixer></a-gltf-model>
+          animation-mixer visible="false"></a-gltf-model>
 
-          <a-text value="Click"
-          font="FontsFree-Net-Akzidenz-grotesk-bold-msdf.json"
-          color="#33C3F0"
-          negate="false">
-  </a-text>
+          <a-gltf-model rotation="90 0 0" position="1.9 -0.5 0" scale="2 2 2" src="#enter"
+          animation-mixer ></a-gltf-model>
+
+          <a-text value="Click Me"
+          id="text"
+          position="-0.3 -0.5 0"
+          scale="0.7 0.7 0.7"
+          color="#3D7DE7"
+          negate="false" 
+          animation="property: position; to: -0.3 -0.4 0; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"></a-text>
+
+          <a-entity camera>
+            <a-entity cursor="fuse: true; fuseTimeout: 500"
+                    position="0 0 -1"
+                    geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+                    material="color: black; shader: flat">
+            </a-entity>
+          </a-entity>
    
-         <!-- animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate" -->
-        <!-- <a-gltf-model rotation="0 90 0 " position="0 0 0" scale="5 5 5" src="#model1" animation-mixer ></a-gltf-model> -->
+
       </a-entity> 
-<!-- 
-      <a-entity mindar-image-target="targetIndex: 1">
-        <a-plane src="#card2" position="0 0 0" height="1" width="1" rotation="0 0 0"></a-plane>
-        <a-gltf-model rotation="0 0 0 " position="0 0 0.1" scale="0.05 0.05 0.05" src="#model" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate">
-      </a-entity>
-
-
-
-      <a-entity mindar-image-target="targetIndex: 2">
-        <a-plane src="#card3" position="0 0 0" height="1" width="1" rotation="0 0 0"></a-plane>
-        <a-gltf-model rotation="0 0 0 " position="0 0 0.1" scale="0.05 0.05 0.05" src="#model" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate">
-      </a-entity> -->
 
     
 
-
-
-
   <script>
-    window.addEventListener('click',function(){
-      var video1=document.querySelector('#cm');
-      if(video1.paused==true){
-        video1.play();
-      }else{
-        video1.pause();
-      }
-    },false);
 
+document.querySelector('#text').addEventListener('click', function () {
+  console.log('This 3D element was clicked!');
+});
+ 
 
-    window.addEventListener('click',function(){
-      var video2=document.querySelector('#bah');
-      if(video2.paused==true){
-        video2.play();
-      }else{
-        video2.pause();
-      }
-    },false);
-
-
-    window.addEventListener('click',function(){
-      var video3=document.querySelector('#wf');
-      if(video3.paused==true){
-        video3.play();
-      }else{
-        video3.pause();
-      }
-    },false);
-
-
-    window.addEventListener('click',function(){
-      var video4=document.querySelector('#eg');
-      if(video4.paused==true){
-        video4.play();
-      }else{
-        video4.pause();
-      }
-    },false);
-
-
-    window.addEventListener('click',function(){
-      var video5=document.querySelector('#el');
-      if(video5.paused==true){
-        video5.play();
-      }else{
-        video5.pause();
-      }
-    },false);
-
-
-    window.addEventListener('click',function(){
-      var video6=document.querySelector('#rf');
-      if(video6.paused==true){
-        video6.play();
-      }else{
-        video6.pause();
-      }
-    },false);
   </script>
 
 
