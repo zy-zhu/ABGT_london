@@ -76,35 +76,46 @@
        
       </div>
     </div> -->
-
-    <!-- Intro Video -->
-    <!-- <div class="video-intro" id="video-intro">
-      <video class="video-intro-box" id="play" autoplay="false" controls src="./static/video/cm.mp4" playsinline webkit-playsinline></video>
-      <span class="skip" id='skip' onclick="closeVideo();">&times;close</span>
-    </div>  -->
-    <!-- <span class="instruction" id="instruction" onclick="openInstru();">&target; Instruction</span> -->
-   
+  
    
     <!-- AR Content  -->
 
     <a-scene mindar-image="imageTargetSrc: static/img/marker_1set.mind" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
       <a-camera position="0 0 0" look-controls="enabled: false" rotation-reader></a-camera>
       <a-assets>
-      <img id="card" src="static/asset/marker_full.jpg" />
-        <a-asset-item id="model1" src="static/asset/asset05.gltf"></a-asset-item>
-        <a-asset-item id="model" src="static/asset/asset05.gltf"></a-asset-item>
+      <img id="card" src="static/marker/marker_full.jpg" />
+      <a-asset-item id="model_10" src="static/assets/10x.gltf"></a-asset-item>
+      <a-asset-item id="model_3" src="static/assets/1_3.gltf"></a-asset-item>
+      <a-asset-item id="model_bs" src="static/assets/Big Seal.gltf"></a-asset-item>
+      <a-asset-item id="model_c1" src="static/assets/Cloud1.gltf"></a-asset-item>
+      <a-asset-item id="model_c2" src="static/assets/Cloud2.gltf"></a-asset-item>
+      <a-asset-item id="model_c3" src="static/assets/Cloud3.gltf"></a-asset-item>
+      <a-asset-item id="model_dlr" src="static/assets/DLR.gltf"></a-asset-item>
+        <a-asset-item id="model_hw1" src="static/assets/HeatWave1.gltf"></a-asset-item>
+        <a-asset-item id="model_hw2" src="static/assets/HeatWave2.gltf"></a-asset-item>
+        <a-asset-item id="model_hwt" src="static/assets/HeatWaves Text.gltf"></a-asset-item>
+        <a-asset-item id="model_pb" src="static/assets/Plastic Bottle.gltf"></a-asset-item>
+        <a-asset-item id="model_sw" src="static/assets/Seaweed.gltf"></a-asset-item>
       </a-assets>
 
       <a-entity mindar-image-target="targetIndex: 0">
+        <a-plane src="#card" position="0 0 -0.2" height="1.5" width="1" rotation="0 0 0"></a-plane>
+        <a-gltf-model rotation="90 0 0 " position="0 0 0" scale="2 4 2" src="#model_10" animation-mixer></a-gltf-model>
+        <a-gltf-model rotation="90 0 0 " position="0 0 0" scale="2 4 2" src="#model_3" animation-mixer></a-gltf-model>
+        <a-gltf-model rotation="90 0 0 " position="0 0 0" scale="2 4 2" src="#model_bs" animation-mixer></a-gltf-model>
+        <a-gltf-model rotation="90 0 0 " position="0 0 0" scale="2 4 2" src="#model_c1" animation-mixer></a-gltf-model>
+        <a-gltf-model rotation="90 0 0 " position="0 0 0" scale="2 4 2" src="#model_c2" animation-mixer></a-gltf-model>
+        <a-gltf-model rotation="90 0 0 " position="0 0 0" scale="2 4 2" src="#model_c3" animation-mixer></a-gltf-model>
+        <a-gltf-model rotation="90 0 0 " position="0 0 0" scale="2 4 2" src="#model_dlr" animation-mixer></a-gltf-model>
+        <a-gltf-model rotation="90 0 0 " position="0 0 0" scale="2 4 2" src="#model_hw1" animation-mixer></a-gltf-model>
+        <a-gltf-model rotation="90 0 0 " position="0 0 0" scale="2 4 2" src="#model_hw2" animation-mixer></a-gltf-model>
+        <a-gltf-model rotation="90 0 0 " position="0 0 0" scale="2 4 2" src="#model_hwt" animation-mixer></a-gltf-model>
+        <a-gltf-model rotation="90 0 0 " position="0 0 0" scale="2 4 2" src="#model_pb" animation-mixer></a-gltf-model>
+        <a-gltf-model rotation="90 0 0 " position="0 0 0" scale="2 4 2" src="#model_sw" animation-mixer></a-gltf-model>
 
-      
-        <!-- <a-plane src="#card" position="0 0 -0.2" height="1.5" width="1" rotation="0 0 0"></a-plane> -->
 
-        <!-- animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate" -->
-     
+         <!-- animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate" -->
         <!-- <a-gltf-model rotation="0 90 0 " position="0 0 0" scale="5 5 5" src="#model1" animation-mixer ></a-gltf-model> -->
-       
-        <a-gltf-model rotation="90 0 0 " position="0 0 0" scale="2 4 2" src="#model" animation-mixer></a-gltf-model>
       </a-entity> 
 <!-- 
       <a-entity mindar-image-target="targetIndex: 1">
