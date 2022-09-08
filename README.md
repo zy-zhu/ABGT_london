@@ -3,10 +3,10 @@
 This is a project in the collaboration between MIT Climate Machine and AnjunaBeats.
 <br>Click [This Link](https://zy-zhu.github.io/ABGT_london/) to view the AR experience. 
 
-*Scan this Image*
+
 
 ## Downloadables
-
+*Scan this Image*
 <img src="https://github.com/zy-zhu/ABGT_london/blob/main/static/marker/marker_full.jpg?raw=true" width=20% alt="Poster"></img>
 
 
