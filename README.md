@@ -8,5 +8,5 @@
 ## Credits
 
 This is website is designed and developed by 
-*Zoey Zhu*
-*Supreetha K*
+<br>*[Zoey Zhu](https://iam-zy.com/)*
+<br>*[Supreetha K](https://supreethack.cargo.site/)*
