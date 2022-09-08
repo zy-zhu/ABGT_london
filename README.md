@@ -1,7 +1,7 @@
 # ABGT-London
 
 This is a project in the collaboration between MIT Climate Machine and AnjunaBeats.
-Click [This Link](https://zy-zhu.github.io/ABGT_london/) to view the AR experience. 
+<br>Click [This Link](https://zy-zhu.github.io/ABGT_london/) to view the AR experience. 
 
 *Scan this Image*
 
