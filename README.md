@@ -15,7 +15,5 @@ This is a project in the collaboration between MIT Climate Machine and AnjunaBea
 ## Credits
 
 This is website is designed and developed by 
-
 <br>*[Zoey Zhu](https://iam-zy.com/)*
-
 <br>*[Supreetha K](https://supreethack.cargo.site/)*
