@@ -1,3 +1,3 @@
 # ABGT-london
 
-*** Scan this Image ***
+*Scan this Image
